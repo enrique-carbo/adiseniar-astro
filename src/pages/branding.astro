@@ -1,0 +1,221 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Branding',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Branding"
+    title="Identidad de marca"
+    subtitle="La identidad que te define, es la identidad que te conecta. Expresate a través de tu apariencia, comportamiento y valores."
+    image={{
+      src: '~/assets/images/branding.png',
+      alt: 'Branding Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Elementos que la componen"
+    subtitle="Fundamentales para diferenciarse, crear confianza y fomentar la lealtad de los clientes."
+    columns={3}
+    items={[
+      {
+        title: 'Logotipo',
+        description:
+          'El logotipo es el símbolo más reconocido de una marca y es el primer contacto que los clientes tienen con la marca.',
+        icon: 'tabler:brand-tabler',
+      },
+      {
+        title: 'Colores',
+        description:
+          'Los colores son un elemento clave en la identidad de marca, ya que pueden evocar emociones y sentimientos específicos.',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Tipografía',
+        description: ` La tipografía es la forma en que se presenta el texto en una marca, lo que puede influir en la percepción y la memoria de la marca.`,
+        icon: 'tabler:typography',
+      },
+      {
+        title: 'Tono de voz',
+        description:
+          'El tono de voz es la forma en que una marca se comunica con los clientes, lo que puede ser formal, informal, amistoso o profesional.',
+        icon: 'tabler:social',
+      },
+      {
+        title: 'Valores',
+        description:
+          'Los valores son los principios que guían la marca y la forma en que se comporta.',
+        icon: 'tabler:seeding',
+      },
+      {
+        title: 'Misión',
+        description:
+          'La misión es la razón por la que una marca existe y lo que se propone lograr.',
+        icon: 'tabler:target',
+      },
+      {
+        title: 'Visión',
+        description:
+          'La visión es la visión que una marca tiene para el futuro y cómo se propone lograrla.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Confianza',
+        description: `La identidad de marca puede crear confianza en la marca y en sus productos o servicios.`,
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Comunicación',
+        description:
+          'La identidad de marca proporciona una guía para la comunicación de la marca y ayuda a los empleados a entender la misión y los valores de la marca.',
+        icon: 'tabler:message-dots',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Visibilidad y accesibilidad',
+        description:
+          'En la era digital, las marcas están disponibles las 24 horas del día, los 7 días de la semana. La identidad debe ser coherente y reconocible en todos los canales y dispositivos.',
+        icon: 'tabler:24-hours',
+      },
+      {
+        title: 'Experiencia del usuario',
+        description:
+          'Una identidad de marcas coherente y atractiva puede mejorar la experiencia del usuario y aumentar la lealtad y la satisfacción del cliente.',
+        icon: 'tabler:user-heart',
+      },
+      {
+        title: 'Personalización',
+        description:
+          'La era digital permite una mayor personalización en la comunicación y la experiencia del usuario.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Costos y eficiencia',
+        description:
+          'La identidad de marcas en línea puede ser más eficiente y rentable que la publicidad tradicional. Una identidad de marcas fuerte y reconocible puede reducir los costos de marketing y aumentar el ROI.',
+        icon: 'tabler:coin',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/branding1.png',
+      alt: 'Branding image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Identidad de marca en la era Digital</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Diferenciación',
+        description:
+          'La identidad de marcas permite a las empresas diferenciarse de la competencia y establecer una posición única en el mercado.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Reconocimiento y confianza',
+        description:
+          'La identidad de marcas puede influir en la percepción que los clientes tienen de la empresa. Una identidad de marcas coherente y atractiva puede aumentar la confianza y la credibilidad de la empresa.',
+        icon: 'tabler:checks',
+      },
+      {
+        title: 'Comunicación efectiva',
+        description:
+          'Una identidad de marcas coherente y atractiva puede ayudar a las empresas a comunicar sus valores, objetivos y beneficios de manera efectiva.',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Legado y herencia',
+        description:
+          'La identidad de marcas puede dejar un legado y una herencia duradera. Una identidad de marcas fuerte y reconocible puede ayudar a las empresas a dejar un impacto positivo.',
+        icon: 'tabler:dna',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/branding2.png',
+      alt: 'Branding Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Herramienta clave para el éxito</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Words from real customers"
+    testimonials={[
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Emily Kennedy',
+        job: 'Front-end developer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        name: 'Sarah Hansen',
+        job: 'Photographer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'Mark Wilkinson',
+        job: 'Small business owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'More testimonials...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      text: 'Start exploring',
+      href: '/',
+    }]}
+    title="Dive into our template collection"
+    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
+  />
+</Layout>

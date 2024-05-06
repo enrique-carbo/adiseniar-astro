@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Diseño gráfico',
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+  
+    <Hero
+      tagline="Comunicación visual"
+      title="Diseño Gráfico"
+      subtitle="Desbloquea el potencial de tu marca comunicando información de manera efectiva y atractiva."
+      image={{
+        src: '~/assets/images/graphic-designer.png',
+        alt: 'Branding Hero Image',
+      }}
+    />
+
+    <!-------- Features2 Widget--------------------------- -->
+    <Features2
+    title="Acerca del Diseño"
+    subtitle="Proceso de comunicación visual que combina arte, tecnología y creatividad para transmitir mensajes, ideas y valores a través de imágenes, símbolos, colores, tipografías y otros elementos visuales. El diseño gráfico se utiliza para crear materiales impresos y digitales, como logotipos, folletos, carteles, sitios web, entre otros."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-100 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Servicios ofrecidos",
+    columns = {2},
+    items={[
+      {
+        title: 'Diseño de Logotipos',
+        description:
+          'Creación de logotipos personalizados para empresas, organizaciones y marcas.',
+        icon: 'logo-creation',
+      },
+      {
+        title: 'Diseño de identidad corporativa',
+        description:
+          'Creación de paletas de colores, tipografías y elementos visuales que representan la imagen de una empresa.',
+        icon: 'branding',
+      },
+      {
+        title: 'Diseño de materiales impresos',
+        description:
+          'Diseño de folletos publicitarios, flyers, tarjetas de presentación, recetarios médicos, etiquetas, entre otros.',
+        icon: 'graphic-material',
+      },
+      {
+        title: 'Diseño para redes sociales',
+        description:
+          'Creación de contenido visual para redes sociales, como imágenes, videos y animaciones.',
+        icon: 'social-media',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-neutral-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+</Layout>

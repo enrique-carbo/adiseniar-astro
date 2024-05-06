@@ -1,0 +1,313 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Adiseniar — Transformación Digital',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactanos',
+        href: '/contact',
+        icon: 'tabler:trending-up',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Adiseniar Hero Image' }}
+  >
+    <Fragment slot="title">
+      Tecnología Digital a tu alcance
+    </Fragment>
+    
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        La tecnología digital juega un papel cada vez más importante
+        en los negocios y en la vida cotidiana.
+      </span>
+      
+      <span>Nuestros servicios de transformación digital te pueden ayudar a aprovechar las últimas
+        innovaciones y conectarte mejor con tus clientes.</span>
+      
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Tecnologías Innovadoras"
+    title="Beneficios de integrar tecnologías digitales"
+    items={[
+      {
+        title: 'Mejora de la imagen corporativa',
+        description:
+          'Te ayudamos a crear una imagen corporativa coherente y atractiva, que refleje la identidad y los valores de la empresa.',
+      },
+      {
+        title: 'Diseño gráfico efectivo',
+        description:
+          'Creamos material visuales atractivo y efectivo, como logotipos, folletos, carteles, entre otros, que ayuden a comunicar el mensaje de la empresa de manera clara y concisa.',
+      },
+      {
+        title: 'Desarrollo web profesional',
+        description:
+          'Podemos diseñar y desarrollar un sitio web atractivo y funcional, que se adapte a las necesidades de la empresa y atraiga a los clientes.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/software-dev.png',
+      alt: 'Ilustración de Desarrollador de Software',
+    }}
+  >
+    <Fragment slot="content">
+      Mejorando la eficiencia, la eficacia y la innovación.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-neutral-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Experiencia del usuario',
+        description: `Podemos crear una experiencia del usuario intuitiva y agradable, que facilite la navegación y la interacción con el sitio web.`,
+      },
+      {
+        title: 'Optimización para motores de búsqueda (SEO)',
+        description:
+          'Optimización del sitio web para que sea más visible en los motores de búsqueda, lo que puede aumentar el tráfico y las conversiones.',
+      },
+      {
+        title: 'Últimas tendencias y tecnologías',
+        description:
+          "Utilizamos las últimas tendencias y tecnologías en diseño gráfico y desarrollo web, lo que puede ayudar a la empresa a mantenerse competitiva.",
+      },
+      {
+        title: 'Aumento de la visibilidad',
+        description:
+          'Un sitio web atractivo y funcional puede aumentar la visibilidad de la empresa y atraer a nuevos clientes.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/software-dev-1.png',
+      alt: 'Ilustración Software Developer'
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-neutral-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Roadmap"
+    title="Estrategia de Digitalización"
+    subtitle="Enfoque personalizado para la implementación de tecnologías digitales."
+    items={[
+      {
+        title: 'Análisis de necesidades',
+        description:
+          'Identificar las áreas de oportunidad para la implementación de tecnologías digitales.',
+        icon: 'tabler:analyze',
+      },
+      {
+        title: 'Definición de la estrategia digital',
+        description:
+          'Definir la visión y la misión digital para establecer objetivos y metas que sean claras y medibles.',
+        icon: 'tabler:go-game',
+      },
+      {
+        title: 'Selección de tecnologías',
+        description:
+          'Investigar y evaluar diferentes opciones de tecnologías digitales.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Diseño y desarrollo',
+        description:
+          'Diseñar y desarrollar la solución digital seleccionada.',
+        icon: 'tabler:git-compare',
+      },
+      {
+        title: 'Implementación y configuración',
+        description:
+          "Implementar y configurar la solución digital en el entorno del cliente.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Capacitación y soporte',
+        description:
+          'Proporcionar capacitación y soporte al cliente para asegurar que entienda cómo utilizar la solución digital.',
+        icon: 'tabler:home-question',
+      },
+      {
+        title: 'Monitoreo y evaluación',
+        description:
+          'Monitorear y evaluar el rendimiento de la solución digital. Realizar ajustes y mejoras continuas.',
+        icon: 'tabler:graph',
+      },
+      {
+        title: 'Seguridad y protección de datos',
+        description:
+          'Implementar medidas de seguridad y protección de datos para asegurar la integridad y confidencialidad de la información del cliente.',
+        icon: 'tabler:lock',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Servicios"
+    subtitle="Embajadores digitales: Los líderes de la revolución tecnológica."
+    tagline="Digitalizate"
+    items={[
+      {
+        title: 'Diseño Gráfico',
+        description: "Creación de logotipos, íconos y otros elementos visuales que reflejen la identidad y los valores de su marca.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Branding',
+        description:
+          "La marca es un aspecto crucial de cualquier negocio, ya que ayuda a establecer una identidad única y memorable que la distingue de la competencia y resuena con su público.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Marketing Digital',
+        description:
+          'El marketing digital se utiliza para promocionar productos y servicios, aumentar la visibilidad de una marca, generar tráfico en un sitio web, aumentar las ventas, entre otros objetivos.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Marketing de Contenidos',
+        description:
+          "Se utiliza para crear contenido de calidad que atraiga a los clientes potenciales y les permita conocer la marca y sus productos o servicios.",
+        icon: 'flat-color-icons:start',
+      },
+      {
+        title: 'Desarrollo Software',
+        description:
+          'El desarrollo web puede ayudar a fortalecer la imagen corporativa y la identidad de marca de una empresa. Un sitio web profesional y atractivo puede aumentar la confianza y la credibilidad de los clientes potenciales.',
+        icon: 'flat-color-icons:command-line',
+      },
+      {
+        title: 'Análisis de Datos',
+        description: 'El desarrollo web y el marketing digital pueden ayudar a una empresa a recopilar y analizar datos valiosos sobre los clientes potenciales y actuales.',
+        icon: 'flat-color-icons:bullish',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AstroWind documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas frecuentes"
+    subtitle="Todo lo que necesitas saber sobre nuestro proceso de transformación digital."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué es la transformación digital?',
+        description:
+          "La transformación digital es el proceso de integración de tecnologías digitales en todos los aspectos de una empresa, con el fin de mejorar la eficiencia, reducir costos y aumentar la competitividad.",
+      },
+      {
+        title: '¿Cómo puede beneficiar a mi empresa?',
+        description:
+          'La transformación digital puede beneficiar a su empresa al mejorar la experiencia del cliente, aumentar la productividad, reducir costos y mejorar la toma de decisiones.',
+      },
+      {
+        title: '¿Cuáles son los pasos para implementar una estrategia de transformación digital efectiva?',
+        description:
+          "Los pasos incluyen: (1) evaluar las necesidades de la empresa, (2) definir una visión y objetivos digitales, (3) seleccionar tecnologías adecuadas, (4) desarrollar un plan de implementación, (5) capacitar al personal y (6) monitorear y evaluar el progreso.",
+      },
+      {
+        title: "¿Cómo puedo medir el éxito de mi estrategia de transformación digital?",
+        description:
+          "Puede medir el éxito de su estrategia de transformación digital mediante la identificación de métricas clave de rendimiento (KPIs) relevantes para su empresa, como la tasa de conversión, el tiempo de respuesta, la satisfacción del cliente, entre otros.",
+      },
+      {
+        title: '¿Cuánto tiempo y recursos necesitaré para implementar una estrategia de transformación digital?',
+        description:
+          "El tiempo y los recursos necesarios para implementar una estrategia de transformación digital variarán dependiendo del tamaño y complejidad de su empresa, así como de la amplitud de la transformación.",
+      },
+      {
+        title: '¿Cómo puedo asegurarme de que mi equipo esté preparado para la transformación digital?',
+        description:
+          "Puede asegurarse de que su equipo esté preparado para la transformación digital mediante la capacitación y el desarrollo de habilidades digitales, como la formación en tecnologías específicas, la capacitación en pensamiento digital y la creación de un ambiente de trabajo colaborativo y innovador.",
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction>
+</Layout>
+
+

@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+const metadata = {
+  title: 'Adiseniar — Desarrollo de Software',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+    <!-- Hero Widget ******************* -->
+    <Hero2
+    tagline="Tecnología que transforma."
+    image={{
+      src: '~/assets/images/software-dev-hero.png',
+      alt: 'Software developer illustration',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Software:</span> <br /> brindamos soluciones <span
+        class="hidden xl:inline">con código.</span
+      >
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Desarrollamos soluciones de software para impulsar la transformación digital de tus operaciones
+      y mejorar tus resultados.
+    </Fragment>
+    </Hero2>
+
+    
+</Layout>
