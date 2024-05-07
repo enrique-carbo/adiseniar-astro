@@ -9,6 +9,7 @@ import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components'
 
 const metadata = {
   title: 'Adiseniar — Transformación Digital',
@@ -25,10 +26,10 @@ const metadata = {
         variant: 'primary',
         text: 'Contactanos',
         href: '/contact',
-        icon: 'tabler:trending-up',
+        icon: 'tabler:arrow-big-right-filled',
       }
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Adiseniar Hero Image' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Adiseniar Hero' }}
   >
     <Fragment slot="title">
       Tecnología Digital a tu alcance
@@ -291,20 +292,19 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Vamos adiseniar',
+        href: '/contact',
+        icon: 'tabler:arrow-big-right-filled',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      <span>Adiseniar</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Tecnología Digital a tu alcance. 
+      <span class="mt-3 flex justify-center md:inline-flex md:ml-3"><Icon class="text-4xl" name="rocket"/></span>
     </Fragment>
   </CallToAction>
 </Layout>

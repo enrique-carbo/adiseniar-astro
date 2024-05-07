@@ -1,6 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
 
 const metadata = {
   title: 'Adiseniar — Desarrollo de Software',
@@ -11,7 +14,7 @@ const metadata = {
 <Layout metadata={metadata}>
     <!-- Hero Widget ******************* -->
     <Hero2
-    tagline="Tecnología que transforma."
+    tagline="Tecnología que transforma"
     image={{
       src: '~/assets/images/software-dev-hero.png',
       alt: 'Software developer illustration',
@@ -28,6 +31,60 @@ const metadata = {
       y mejorar tus resultados.
     </Fragment>
     </Hero2>
+
+    <!-- Features3 Widget ************** -->
+
+  <Features3
+  id="landing"
+  title="¿Qué es una Landing?"
+  subtitle="Es una página web específica que se crea para promover un producto, servicio o idea. Herramienta poderosa para mejorar la visibilidad de la marca, aumentar las conversiones y mejorar la experiencia del usuario."
+  tagline="Página de Presentación"
+  columns={2}
+  items={[
+    {
+      title: 'Download and install the app',
+      description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
+      icon: 'tabler:square-number-1',
+    },
+    {
+      title: 'Sign up',
+      description:
+        'Create your account by providing the necessary information, enabling you to access our full range of features.',
+      icon: 'tabler:square-number-2',
+    },
+    {
+      title: 'Browse templates',
+      description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
+      icon: 'tabler:square-number-3',
+    },
+    {
+      title: 'Preview and select a template',
+      description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
+      icon: 'tabler:square-number-4',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/software-dev-2.png',
+    alt: 'Software development',
+  }}
+>
+  <Fragment slot="bg">
+     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features3>
+
+    <!-- Brands Widget ****************** -->
+
+  <Brands
+  tagline="Ciencias Informáticas"
+  title="Herramientas y tecnologías"
+  subtitle="Creamos soluciones innovadoras y escalables con las últimas tecnologías y tendencias."
+  icons={[
+    'html-5', 'css-3', 'javascript', 'node-js', 'python', 'tailwind', 'docker', 'linux',
+    'astro', 'react', 'vue', 'huggingface', 'transformers', 'git', 'github', 'gitlab',
+    'cloudflare', 'google'
+  ]}
+/>
 
     
 </Layout>
