@@ -1,0 +1,205 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Productos',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Paquetes"
+    title="Productos"
+    subtitle="Elige un plan perfecto que encaje en tus objetivos y necesidades. Como cada proyecto es único, también podes consultar por planes personalizados."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    prices={[
+      {
+        title: 'Fundamentos',
+        subtitle: 'Desbloquea la esencia de tu marca',
+        price: 19,
+        items: [
+          {
+            description: 'Diseño o Rediseño de logo',
+          },
+          {
+            description: 'Diseño de tarjeta personal y papeleria',
+          },
+          {
+            description: 'Redes sociales, diseño de 6 posteos',
+          },
+        ],
+        callToAction: {
+          text: 'Empecemos',
+          href: '/contact',
+        },
+      },
+      {
+        title: 'Identidad Total',
+        subtitle: 'Identidad de marca atractiva',
+        price: 49,
+        items: [
+          {
+            description: 'Diseño o Rediseño de logo',
+          },
+          {
+            description: 'Diseño de tarjeta personal y papeleria',
+          },
+          {
+            description: 'Redes sociales, diseño de 12 posteos',
+          },
+          {
+            description: 'Video de hasta 30 segundos',
+          }
+        ],
+        callToAction: {
+          text: 'Empecemos',
+          href: '/contact',
+        }        
+      },
+      {
+        title: 'Lanzamiento Pro',
+        subtitle: 'Lleva tu marca al siguiente nivel',
+        price: 199,
+        items: [
+          {
+            description: 'Diseño o Rediseño de logo',
+          },
+          {
+            description: 'Diseño de tarjeta personal y papeleria',
+          },
+          {
+            description: 'Redes sociales, diseño de 12 posteos',
+          },
+          {
+            description: 'Video de hasta 30 segundos',
+          },
+          {
+            description: 'Página Web de Presentación o Landing Page',
+          },
+        ],
+        callToAction: {
+          text: 'Empecemos',
+          href: '/contact',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'Premium',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Un viaje guiado desde el contacto hasta la entrega del producto"
+    tagline="Roadmap"
+    isReversed={true}
+    items={[
+      {
+        title: 'Contacto Inicial',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Selección del Plan',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Pago de Seña',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Revisión del Pedido',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Desarrollo de los Productos',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'Revisión y Aprobación',
+        icon: 'tabler:number-6',
+      },
+      {
+        title: 'Entrega',
+        icon: 'tabler:number-7',
+      },
+      {
+        title: 'Soporte',
+        icon: 'tabler:number-8',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/steps-promotion.png',
+      alt: 'Steps promotions services',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Algunas dudas frecuentes relacionadas con los planes y productos."
+    columns={1}
+    items={[
+      {
+        title: '¿En qué moneda se encuentra publicados los planes?',
+        description:
+        "La moneda en que se encuentran las publicaciones son en dólares estadounidenses (USD)."
+      },
+      {
+        title: 'En el diseño de logos ¿que formatos se entregan?',
+        description:
+          "Se entregan archivos vectorizado en curvas SVG y PDF. Además archivos JPG y PNG con fondos blancos, negros y transparentes para diversas utilidades incluyendo marcas de agua.",
+      },
+      {
+        title: '¿Existe la posibilidad de animar un logotipo?',
+        description:
+          "¡Sí! Es posible animar un logotipo. Podemos agregar movimiento y vida a un logotipo estático, creando una experiencia más dinámica y atractiva.",
+      },
+      {
+        title: '¿Qué variantes pueden haber en los posteos para redes sociales?',
+        description:
+          'Los posteos en redes sociales pueden ser en placas fijas o carrousel que son especialmente utiles en Instagram y Facebook.',
+      },
+      {
+        title: '¿Qué archivos se entregan como landing page o página web de presentación',
+        description:
+          'Se entregará el código fuente de la página web o landing page, incluyendo HTML, CSS, JavaScript y cualquier otro lenguaje de programación utilizado. Además todas las imágenes, iconos, y otros recursos utilizados.',
+      },
+    ]}
+  />
+
+ <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Vamos adiseniar',
+        href: '/contact',
+        icon: 'tabler:arrow-big-right-filled',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span>Adiseniar</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Tecnología Digital a tu alcance. 
+      <span class="mt-3 flex justify-center md:inline-flex md:ml-3"><Icon class="text-4xl" name="rocket"/></span>
+    </Fragment>
+  </CallToAction>
+</Layout>
