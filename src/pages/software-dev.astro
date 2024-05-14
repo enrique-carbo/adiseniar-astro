@@ -3,6 +3,8 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
 
 
 const metadata = {
@@ -64,7 +66,7 @@ const metadata = {
     },
   ]}
   image={{
-    src: '~/assets/images/software-dev-2.png',
+    src: '~/assets/images/software-dev-2.svg',
     alt: 'Software development',
   }}
 >
@@ -86,5 +88,26 @@ const metadata = {
   ]}
 />
 
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Vamos adiseniar',
+        href: '/contact',
+        icon: 'tabler:arrow-big-right-filled',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span>Adiseniar</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Tecnología Digital a tu alcance. 
+      <span class="mt-3 flex justify-center md:inline-flex md:ml-3"><Icon class="text-4xl" name="rocket"/></span>
+    </Fragment>
+  </CallToAction>
     
 </Layout>

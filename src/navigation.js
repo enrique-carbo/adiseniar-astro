@@ -17,14 +17,6 @@ export const headerData = {
           text: 'Software',
           href: getPermalink('/software-dev'),
         },
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        }
       ],
     },
     {
@@ -35,25 +27,26 @@ export const headerData = {
       text: 'Blog',
       links: [
         {
-          text: 'Blog List',
+          text: 'Blog',
           href: getBlogPermalink(),
         },
         {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          text: 'Diseño gráfico',
+          href: getPermalink('diseno-grafico', 'category'),
         },
         {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          text: 'Marketing',
+          href: getPermalink('marketing', 'category'),
         },
         {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
+          text: 'Desarrollo',
+          href: getPermalink('desarrollo-software', 'category'),
         },
         {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          text: 'Cuarta revolución',
+          href: getPermalink('cuarta-revolucion-industrial', 'tag'),
         },
+        
       ],
     },
     {
@@ -75,34 +68,26 @@ export const footerData = {
       ],
     },
     {
+      title: 'Blog',
+      links: [
+        {
+          text: 'Blog',
+          href: getBlogPermalink(),
+        },
+        { text: 'Diseño Gáfico', href: getPermalink('diseno-grafico', 'category') },
+        { text: 'Marketing', href: getPermalink('marketing', 'category') },
+        { text: 'Desarrollo Software', href: getPermalink('desarrollo-software', 'category') },
+        
+      ],
+    },
+    {
       title: 'Términos y Privacidad',
       links: [
         { text: 'Términos', href: getPermalink('/terms') },
         { text: 'Políticas de Privacidad', href: getPermalink('/privacy') },
       ],
     },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
-      ],
-    },
+    
   ],
   socialLinks: [
     { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/channel/UCOUoIhVbOC-8sEBaAbFrUzg'},
