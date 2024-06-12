@@ -1,6 +1,6 @@
 site:
   name: Adiseniar
-  site: 'https://astrowind.vercel.app'
+  site: 'https://adiseni.ar'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Adiseniar
     template: '%s — Adiseniar'
-  description: "\U0001F680 Webpage about adiseniar. Graphic design. Web development."
+  description: "\U0001F680 Webpage about adiseniar. Logo design. Graphic design. Web development."
   robots:
     index: true
     follow: true
